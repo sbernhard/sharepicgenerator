@@ -1,7 +1,7 @@
 
-$('#addPicSize').bind('input propertychange', function() { addPic1.resize(); });
-$('#addpicrounded').bind('change', function() {addPic1.draw(); }) ;
-$('#addpicdelete').bind('click', function() {addPic1.delete(); });
+$('#addPicSize1').bind('input propertychange', function() { addPic1.resize(); });
+$('#addpicrounded1').bind('change', function() {addPic1.draw(); }) ;
+$('#addpicdelete1').bind('click', function() {addPic1.delete(); });
 
 const addPic1 = {
     svg: draw.circle(0),
@@ -16,14 +16,13 @@ const addPic1 = {
         });
 
         circleMask = draw.circle(0).fill({color: '#fff'});
-
-        pic = draw.image($('#addpicfile').val(), () => {
+        pic = draw.image($('#addpicfile1').val(), () => {
             let radius = pic.height();
             if( pic.height() > pic.width() ){
                 radius = pic.width();
             }
 
-            if( $('#addpicrounded').prop("checked")) {
+            if( $('#addpicrounded1').prop("checked")) {
                 circleMask.move(pic.width()/2, pic.height() / 2 ).radius( radius / 2  - 3).back();
                 pic.maskWith(circleMask);
             }else{
@@ -46,7 +45,7 @@ const addPic1 = {
     },
 
     resize: function () {
-        let percentage = draw.width() * parseInt($('#addPicSize').val()) / 100;
+        let percentage = draw.width() * parseInt($('#addPicSize1').val()) / 100;
         this.svg.size(percentage);
     }
 

@@ -247,23 +247,23 @@
             </div>
         </div>
 
-        <div class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="list-group-item list-group-item-action flex-column align-items-start pb-0">
             <div class="mb-1 list-group-item-content">
                 <div class="d-flex w-100 justify-content-between">
-                     <span class="text-primary cursor-pointer addpicclicker">
-                        <i class="fa fa-upload"></i> Zusatzbild (Portrait) hochladen
+                     <span class="text-primary cursor-pointer addpicclicker1">
+                        <i class="fa fa-upload"></i> 1. Zusatzbild (Portrait) hochladen
                     </span>
-                    <small class="text-primary cursor-pointer" id="addpicdelete"><i class="fas fa-trash"></i>
+                    <small class="text-primary cursor-pointer" id="addpicdelete1"><i class="fas fa-trash"></i>
                         löschen</small>
                 </div>
-                <div class="mb-1 mt-2">
+                <div class="mb-0 mt-2">
                     <div class="slider">
                         <small>klein</small>
-                        <input type="range" class="custom-range" name="addPicSize" id="addPicSize" min="1" max="100" value="15">
+                        <input type="range" class="custom-range" name="addPicSize1" id="addPicSize1" min="1" max="100" value="15">
                         <small>groß</small>
                         <div class="ml-3">
                             <label>
-                                <input type="checkbox" name="addpicrounded" id="addpicrounded" data-size="xs" data-toggle="toggle" data-on="eckig" data-off="rund">
+                                <input type="checkbox" name="addpicrounded1" id="addpicrounded1" data-size="xs" data-toggle="toggle" data-on="eckig" data-off="rund">
                             </label>
                         </div>
                     </div>
@@ -271,6 +271,7 @@
 
             </div>
         </div>
+
 
         <div class="list-group-item list-group-item-action flex-column align-items-start">
             <div class="mb-1 d-flex align-items-lg-center">
@@ -297,7 +298,8 @@
             <input type="hidden" name="backgroundY" id="backgroundY">
             <input type="hidden" name="backgroundURL" id="backgroundURL">
             <input type="hidden" name="iconfile" id="iconfile">
-            <input type="hidden" name="addpicfile" id="addpicfile">
+            <input type="hidden" name="addpicfile1" id="addpicfile1">
+            <input type="hidden" name="addpicfile2" id="addpicfile2">
             <input type="hidden" name="fullBackgroundName" id="fullBackgroundName">
             <input type="hidden" name="textX" id="textX">
             <input type="hidden" name="textY" id="textY">
@@ -313,7 +315,8 @@
         <input type="file" class="custom-file-input upload-file" id="uploadfile" accept="image/*,video/mp4">
         <input type="file" class="custom-file-input upload-file" id="uploadlogo" accept="image/*">
         <input type="file" class="custom-file-input upload-file" id="uploadicon" accept="image/*">
-        <input type="file" class="custom-file-input upload-file" id="uploadaddpic" accept="image/*">
+        <input type="file" class="custom-file-input upload-file" id="uploadaddpic1" accept="image/*">
+        <input type="file" class="custom-file-input upload-file" id="uploadaddpic2" accept="image/*">
     </div>
 
 

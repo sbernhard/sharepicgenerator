@@ -29,7 +29,8 @@ switch( $id ){
     case "uploadbyurl":
         handle_uploadbyurl();
         break;
-    case "uploadaddpic":
+    case "uploadaddpic1":
+    case "uploadaddpic2":
         handle_addpic_upload();
         break;
     default:

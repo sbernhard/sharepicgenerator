@@ -62,9 +62,13 @@ $('.upload-file').change(function (event) {
                 icon.load();
                 $('.iconsizeselectwrapper').removeClass('d-none');
                 break;
-            case "uploadaddpic":
-                $('#addpicfile').val(obj.addpicfile);
+            case "uploadaddpic1":
+                $('#addpicfile1').val(obj.addpicfile);
                 addPic1.draw();
+                break;
+            case "uploadaddpic2":
+                $('#addpicfile2').val(obj.addpicfile);
+                addPic2.draw();
                 break;
             default:
                 console.log("error in upload", obj);
@@ -179,8 +183,12 @@ $('.uploadiconclicker').click(function(){
     $('#uploadicon').click();
 });
 
-$('.addpicclicker').click(function(){
-    $('#uploadaddpic').click();
+$('.addpicclicker1').click(function(){
+    $('#uploadaddpic1').click();
+});
+
+$('.addpicclicker2').click(function(){
+    $('#uploadaddpic2').click();
 });
 
 
