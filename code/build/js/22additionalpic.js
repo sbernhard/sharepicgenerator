@@ -1,19 +1,23 @@
 
-const addPic = {
+$('#addPicSize').bind('input propertychange', function() { addPic1.resize(); });
+$('#addpicrounded').bind('change', function() {addPic1.draw(); }) ;
+$('#addpicdelete').bind('click', function() {addPic1.delete(); });
+
+const addPic1 = {
     svg: draw.circle(0),
+    circleMask: 0,
+    pic: 0,
 
     draw: function () {
-
-        addPic.svg.remove();
-        addPic.svg = draw.group().addClass('draggable').draggable();
-        addPic.svg.on('dragmove.namespace', function (event) {
+        this.svg.remove();
+        this.svg = draw.group().addClass('draggable').draggable();
+        this.svg.on('dragmove.namespace', function (event) {
              circleMask.move(pic.x(), pic.y());
         });
 
-        var circleMask = draw.circle(0).fill({color: '#fff'});
+        circleMask = draw.circle(0).fill({color: '#fff'});
 
-        var pic = draw.image($('#addpicfile').val(), function (event) {
-
+        pic = draw.image($('#addpicfile').val(), () => {
             let radius = pic.height();
             if( pic.height() > pic.width() ){
                 radius = pic.width();
@@ -25,30 +29,29 @@ const addPic = {
             }else{
                 circleMask.size(0);
             }
-            addPic.svg.add(pic);
-
-            addPic.resize();
+            this.svg.add(pic);
+            this.resize();
 
             text.svg.front();
+            logo.svg.front();
         });
+
     },
 
+
+
     delete: function(){
-        addPic.svg.remove();
-        addPic.svg = draw.circle(0);
+        this.svg.remove();
+        this.svg = draw.circle(0);
     },
 
     resize: function () {
         let percentage = draw.width() * parseInt($('#addPicSize').val()) / 100;
-        addPic.svg.size(percentage);
+        this.svg.size(percentage);
     }
 
 };
 
-
-$('#addPicSize').bind('input propertychange', addPic.resize);
-$('#addpicrounded').bind('change', addPic.draw);
-$('#addpicdelete').bind('click', addPic.delete);
 
 
 

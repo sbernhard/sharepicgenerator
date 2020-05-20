@@ -64,7 +64,7 @@ $('.upload-file').change(function (event) {
                 break;
             case "uploadaddpic":
                 $('#addpicfile').val(obj.addpicfile);
-                addPic.draw();
+                addPic1.draw();
                 break;
             default:
                 console.log("error in upload", obj);
